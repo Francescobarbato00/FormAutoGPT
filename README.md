@@ -25,7 +25,7 @@ FormAutoGPT/
 └── server/         → proxy locale per chiamate OpenAI
     ├── server.js
     ├── package.json
-    └── .env (NON pushato su GitHub)
+    └── .env 
 ```
 
 ---
