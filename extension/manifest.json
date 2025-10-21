@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "FormAutoGPT",
+  "version": "1.0",
+  "description": "Compila automaticamente form e quiz con GPT.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["<all_urls>", "file:///*", "http://localhost:3000/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>", "file:///*"],
+      "js": ["content.js"]
+    }
+  ]
+}

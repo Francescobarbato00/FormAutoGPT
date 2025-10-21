@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz di prova GPT</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+      background: #f9f9f9;
+    }
+    .domanda {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .opzione {
+      background: #fff;
+      padding: 12px;
+      margin: 5px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      width: fit-content;
+      transition: background 0.2s;
+    }
+    .opzione:hover {
+      background: #d7eaff;
+    }
+    .opzione.selezionata {
+      background: #a8e6a1;
+      border-color: #4caf50;
+    }
+  </style>
+</head>
+<body>
+  <div class="domanda">In informatica, cosa si intende per "spyware"?</div>
+
+  <div class="opzione" id="optA">A) Un metodo per migliorare la velocità di risposta di un server</div>
+  <div class="opzione" id="optB">B) Un attacco informatico che sovraccarica un server o un sito web</div>
+  <div class="opzione" id="optC">C) Un software che raccoglie informazioni sull’attività di un utente senza il suo consenso</div>
+  <div class="opzione" id="optD">D) Nessuna delle opzioni precedenti</div>
+
+  <script>
+    // Permette di vedere quando lo script clicca un'opzione
+    document.querySelectorAll('.opzione').forEach(el => {
+      el.addEventListener('click', () => {
+        document.querySelectorAll('.opzione').forEach(o => o.classList.remove('selezionata'));
+        el.classList.add('selezionata');
+      });
+    });
+  </script>
+</body>
+</html>

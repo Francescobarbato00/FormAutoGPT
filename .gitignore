@@ -1,0 +1,6 @@
+# File e cartelle da ignorare
+node_modules/
+.env
+.DS_Store
+Thumbs.db
+*.log
